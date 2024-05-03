@@ -1,13 +1,103 @@
-<p>A brief introduction about yourself and your website.</p>
-
-<h2>Recent Posts/Projects/Updates</h2>
-<ul class="post-list">
-    <li>
-        <span class="post-meta">2023 Apr 28</span>
-        <h3><a class="post-link" href="#">Post/Project Title 1</a></h3>
-    </li>
-    <li>
-        <span class="post-meta">2023 Apr 15</span>  
-        <h3><a class="post-link" href="#">Post/Project Title 2</a></h3>
-    </li>
-</ul>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Name - Personal Website</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        body.dark {
+            background-color: #1c1c1c;
+            color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: none;
+            margin-bottom: 20px;
+        }
+        .post-list {
+            list-style: none;
+            padding: 0;
+        }
+        .post-link {
+            text-decoration: none;
+            color: #0645ad;
+        }
+        .dark .post-link {
+            color: #4e9af1;
+        }
+        .post-meta {
+            color: #999;
+        }
+        .dark .post-meta {
+            color: #ccc;
+        }
+        .post-list li {
+            margin-bottom: 20px;
+        }
+        .post-list h3 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .categories {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .categories a {
+            margin: 0 10px;
+            color: #0645ad;
+            text-decoration: none;
+        }
+        .dark .categories a {
+            color: #4e9af1;
+        }
+        #dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="dark-mode-toggle">🌓</div>
+    
+    <h1>Your Name</h1>
+    
+    <p>A brief introduction about yourself and your website.</p>
+    
+    <div class="categories">
+        <a href="#">Category 1</a>
+        <a href="#">Category 2</a>
+        <a href="#">Category 3</a>
+        <!-- Add more categories as needed -->
+    </div>
+    
+    <h2>Recent Posts/Projects/Updates</h2>
+    <ul class="post-list">
+        <li>
+            <span class="post-meta">2023 Apr 28</span>
+            <h3><a class="post-link" href="#">Post/Project Title 1</a></h3>
+        </li>
+        <li>
+            <span class="post-meta">2023 Apr 15</span>  
+            <h3><a class="post-link" href="#">Post/Project Title 2</a></h3>
+        </li>
+    </ul>
+    
+    <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+        
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+        });
+    </script>
+</body>
+</html>
